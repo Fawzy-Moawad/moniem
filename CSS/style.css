@@ -4,7 +4,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #444444;
-  background-color: #9580a1;
+  background-color: #000000;
 }
 
 a {
@@ -29,6 +29,45 @@ a:hover {
   overflow: hidden; /* Hide overflowing content */
 }
 
+
+.social-other ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-other ul li {
+  display: inline-block;
+  margin-right: 2px; /* Adjust as needed */
+}
+
+.social-other ul li:last-child {
+  margin-right: 0;
+}
+
+.social-other ul li a {
+  font-size: 18px;
+  display: inline-block;
+  background: #2a2a2a;
+  color: #fff;
+  line-height: 36px; /* Center vertically */
+  padding: 0; /* Remove padding */
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.social-other ul li a i {
+  line-height: 36px; /* Center vertically */
+}
+
+.social-other ul li a:hover {
+  background: #4E93BD;
+  color: #fff;
+  text-decoration: none;
+}
 
 h1,
 h2,
@@ -759,7 +798,7 @@ figure img {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #535c6a;
+  background: #000000;
   color: #9580a1;
   font-size: 14px;
   text-align: center;
@@ -796,147 +835,19 @@ figure img {
 /*----------------------------------------------
 #Contact
 ----------------------------------------------*/
-h1, h4, input, textarea, .styled-input label, .submit-btn, input[type=checkbox] + label, input[type=checkbox]:checked + label {
-  font-family: 'Bebas Neue', cursive; /* Change to your desired font */
-}
-h4 {
-  font-weight: 400;
-  font-size: 20px;
-  color: #9b9b9b;
-  line-height: 1.5;
-}
-
-h2 {
-  font-weight: 400;
-  color: #79ba44;
-  line-height: 1.5;
-}
-
-/* ///// inputs /////*/
-
-input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-  font-size: 0.75em;
-  color: #999;
-  top: -5px;
-  -webkit-transition: all 0.225s ease;
-  transition: all 0.225s ease;
-}
-
-.styled-input {
-  float: left;
-  width: 293px;
-  margin: 1rem 0;
-  position: relative;
-  border-radius: 4px;
-}
-
-@media only screen and (max-width: 768px) {
-  .styled-input {
-      width: 100%;
-  }
-}
-
-.styled-input label {
-  color: #8faf9e;
-  padding: 1.3rem 30px 1rem 30px;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  pointer-events: none;
-}
-
-.styled-input.wide {
-  width: 650px;
-  max-width: 100%;
-}
-
-input,
-textarea {
-  padding: 30px;
-  border: 0;
-  width: 100%;
-  font-size: 1rem;
-  background-color: #535c6a;
-  color: white;
-  border-radius: 4px;
-}
-
-input:focus,
-textarea:focus {
-  outline: 0;
-}
-
-input:focus ~ span,
-textarea:focus ~ span {
-  width: 100%;
-  -webkit-transition: all 0.075s ease;
-  transition: all 0.075s ease;
-}
-
-textarea {
-  width: 100%;
-  min-height: 15em;
-}
-
-.input-container {
-  width: 650px;
-  max-width: 100%;
-  margin: 20px auto 25px auto;
-}
-
-.submit-btn {
-  float: right;
-  padding: 7px 35px;
-  border-radius: 60px;
-  display: inline-block;
-  background-color: #8faf9e;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06),
-      0 2px 10px 0 rgba(0, 0, 0, 0.07);
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-.submit-btn:hover {
-  transform: translateY(1px);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10),
-      0 1px 1px 0 rgba(0, 0, 0, 0.09);
-}
-
-@media (max-width: 768px) {
-  .submit-btn {
-      width: 100%;
-      float: none;
-      text-align: center;
-  }
-}
-
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-}
-
-input[type=checkbox]:checked + label {
-  color: #f00;
-  font-style: normal;
-}
-
-
-
-
-
 #contact {
   position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-#contact .container {
+
+
+#contact .container-fluid {
   position: relative;
   z-index: 1; /* Ensure that cards are on top of the video */
+  padding: 0; /* Remove default padding */
 }
 
 #contact .video-bg {

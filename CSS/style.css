@@ -17,19 +17,6 @@ a:hover {
   text-decoration: none;
 }
 
-.banner {
-  width: 75%;
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
-  height: 62.5vmin;
-  min-height: 15em;
-  background: linear-gradient(#000, transparent, #000),
-              url('../img/00.jpg') 50% / cover fixed; /* Use fixed background-attachment */
-  background-blend-mode: multiply;
-  overflow: hidden; /* Hide overflowing content */
-}
-
-
 .social-other ul {
   list-style: none;
   padding: 0;
@@ -50,17 +37,17 @@ a:hover {
   display: inline-block;
   background: #2a2a2a;
   color: #fff;
-  line-height: 36px; /* Center vertically */
+  line-height: 46px; /* Center vertically */
   padding: 0; /* Remove padding */
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   transition: 0.3s;
 }
 
 .social-other ul li a i {
-  line-height: 36px; /* Center vertically */
+  line-height: 46px; /* Center vertically */
 }
 
 .social-other ul li a:hover {
@@ -520,66 +507,13 @@ section {
   }
 }
 
-
-/*--------------------------------------------------------------
-# Work Experience
---------------------------------------------------------------*/
-.section-title h2 {
-color: #79ba44;
-}
-
-.Work .box {
-  padding: 50px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  transition: all ease-in-out 0.3s;
-  height: 100%;
-  background-color: #535c6a;
-  cursor: pointer;
-}
-
-.Work .box h2 {
-  display: block;
-  font-size: 28px;
-  font-weight: 700;
-  color: #79ba44;
-}
-
-.Work .box h4 {
-  font-size: 24px;
-  font-weight: 600;
-  padding: 0;
-  margin: 20px 0;
-  color: #de8b8c;
-}
-
-.Work .box p {
-  color: whitesmoke;
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.Work .box:hover {
-  background: #8faf9e;
-  padding: 30px 30px 70px 30px;
-  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
-}
-.Work .box:hover  h2{
-  color: #535c6a;
-}
-
-.Work .box:hover  h4{
-  color: #9580a1;
-}
-
-.Work .box:hover span,
-.Work .box:hover p {
-  color: #fff;
-}
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+#about {
+  margin: 0;
+  padding: 0;
+}
 .about-section {
   background: url(../img/00.jpg) center center no-repeat;
   background-size: cover;
@@ -619,15 +553,23 @@ color: #79ba44;
   color: #fff;
 }
 
+.about-section .about-section-item img {
+  height: 500px;
+  width: auto;
+  justify-content: cover;
+  align-content: center;
+}
+
 .about-section .about-section-item h3 {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 50px;
   color: #9580a1;
 }
 
 .about-section .about-section-item p {
-  font-weight: 500;
-  font-size: 20px;
+  height: 500px;
+  width: 100%;
+  font-size: 18px;
   color: #fff;
 }
 .about-section .about-section-item p:last-child {
@@ -654,40 +596,40 @@ color: #79ba44;
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
-/* ======= Gallery Section ======= */
 #gallery {
   text-align: center;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#gallery .article-wrapper {
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: #535c6a;
-  box-shadow: none;
-  margin: 20px;
-  border-radius: 10px; /* Added border-radius for rounded corners */
-  cursor: pointer;
-  display: inline-block; /* Display as inline-block for horizontal arrangement */
-  min-height: 200px; /* Set a minimum height for the boxes */
-  overflow: hidden; /* Hide overflow content */
+#gallery .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set the video width to 100% of the parent container */
+  height: 100%; /* Set the video height to 100% of the parent container */
+  object-fit: cover;
+  z-index: -1; /* Behind other elements */
+  filter: blur(10px); /* Apply a blur effect with a 5px radius */
 }
 
-#gallery .article-wrapper:hover {
-  background: #8faf9e;
-  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+#gallery .container-fluid {
+  position: relative;
+  z-index: 1; /* Ensure that cards are on top of the video */
+  padding: 0; /* Remove default padding */
+}
+#gallery img {
+  width: 250px;
+  height: auto;
 }
 
-#gallery .article-wrapper:hover h2 {
-  color: #535c6a;
-}
-
-#gallery .article-wrapper:hover p {
-  color: #fff;
-}
-
-#gallery .article-wrapper:hover .read-more {
-  color: #35322d;
+#gallery h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 0; 
 }
 
 #gallery h2 {
@@ -704,29 +646,26 @@ color: #79ba44;
   padding: 0;
 }
 
-#gallery .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Set the video width to 100% of the parent container */
-  height: 100%; /* Set the video height to 100% of the parent container */
-  object-fit: cover;
-  z-index: -1; /* Behind other elements */
+
+#gallery button {
+  background-color: #D7CFE6;
+  color: #896ABC;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #896ABC;
+}
+
+#gallery a:hover {
+  color: red;
 }
 
 /* Adjust video size for smaller screens */
 @media (max-width: 768px) {
-  #gallery .articles {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid layout for smaller screens */
-    gap: 16px; /* Reduce gap between grid items */
-  }
-
-  #gallery .article-wrapper {
-    padding: 25px; /* Reduce padding on smaller screens */
-  }
 
   #gallery h1 {
     font-size: 20px; /* Reduce font size for heading on smaller screens */
+    margin-top: 0; /* Remove margin at the top */
   }
 
   #gallery h2 {
@@ -738,61 +677,149 @@ color: #79ba44;
   }
 }
 
-/************************ 
-Generic layout (demo looks)
-**************************/
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/*--------------------------------------------------------------
+# Work Experience
+--------------------------------------------------------------*/
+.wrapper {
+  margin-top: 100px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.articles {
-  display: flex; /* Updated display property */
-  max-width: 1200px;
-  margin: auto;
-  padding: 24px;
-  gap: 24px;
-  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+.work-card {
+  top: 30px;
+  position: sticky;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #333;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  h2 {
+    padding: 0;
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    color: #0c4eb9;
+  }
 }
 
-.articles article {
-  width: calc(33.33% - 20px); /* Adjust width for three columns with gap */
+@for $i from 1 through 8 {
+  .work-card:nth-child(#{$i}n) {
+    top: $i * 20px;
+  }
 }
 
-.article-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
 
-.article-body {
-  padding-left: 0;
-}
 
-figure {
-  width: 100%;
-  height: 100%;
+
+
+
+
+
+
+
+.section-title h2 {
+  color: #79ba44;
+  }
+  
+  .Work {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Work .box {
+    padding: 50px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    background-color: #535c6a;
+    cursor: pointer;
+  }
+  
+  .Work .box h2 {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #79ba44;
+  }
+  
+  .Work .box h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0;
+    margin: 20px 0;
+    color: #de8b8c;
+  }
+  
+  .Work .box p {
+    color: whitesmoke;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Work .box:hover {
+    background: #8faf9e;
+    padding: 30px 30px 70px 30px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  }
+  .Work .box:hover  h2{
+    color: #535c6a;
+  }
+  
+  .Work .box:hover  h4{
+    color: #9580a1;
+  }
+  
+  .Work .box:hover span,
+  .Work .box:hover p {
+    color: #fff;
+  }
+  
+
+/*----------------------------------------------
+#Contact
+----------------------------------------------*/
+#contact {
+  position: relative;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-figure img {
-  height: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+#contact .container-fluid {
+  position: relative;
+  z-index: 1; /* Ensure that cards are on top of the video */
+  padding: 0; /* Remove default padding */
 }
 
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
+#contact .video-bg {
   position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set the video width to 100% of the parent container */
+  height: 100%; /* Set the video height to 100% of the parent container */
+  object-fit: cover;
+  z-index: -1; /* Behind other elements */
+  filter: blur(10px); /* Apply a blur effect with a 5px radius */
 }
 
+#contact h1{
+  font-size: 40px;
+  font-weight: 500;
+
+}
+/* Adjust video size for smaller screens */
+@media (max-width: 768px) {
+  #contact .video-bg {
+      object-fit: contain;
+  }
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -831,104 +858,6 @@ figure img {
 #footer .copyright {
   margin: 0 0 5px 0;
 }
-
-/*----------------------------------------------
-#Contact
-----------------------------------------------*/
-#contact {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-#contact .container-fluid {
-  position: relative;
-  z-index: 1; /* Ensure that cards are on top of the video */
-  padding: 0; /* Remove default padding */
-}
-
-#contact .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Set the video width to 100% of the parent container */
-  height: 100%; /* Set the video height to 100% of the parent container */
-  object-fit: cover;
-  z-index: -1; /* Behind other elements */
-}
-
-/* Adjust video size for smaller screens */
-@media (max-width: 768px) {
-  #contact .video-bg {
-      object-fit: contain;
-  }
-}
-
-/*-------------------------------------------------------------
-#AWARDS SECTION 
--------------------------------------------------------------*/
-
-.Work .box {
-  padding: 30px; /* Adjust padding as needed */
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  transition: all ease-in-out 0.3s;
-  height: 100%;
-  background-color: #535c6a;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.Work .box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px; /* Add rounded corners if desired */
-}
-
-.Work .box-details {
-  padding: 20px;
-  text-align: center;
-}
-
-.Work .box h2 {
-  display: block;
-  font-size: 24px;
-  font-weight: 700;
-  color: #79ba44;
-  margin-bottom: 10px;
-}
-
-/* Add more styles for additional details if needed */
-
-/* Additional styles for responsive layout */
-@media screen and (max-width: 960px) {
-  .Work .box {
-    container: card/inline-size;
-  }
-  .Work .box-details {
-    display: none;
-  }
-}
-
-@container card (min-width: 380px) {
-  .Work .box {
-    display: grid;
-    grid-template-columns: 100%;
-    gap: 16px;
-    height: 300px; /* Set a fixed height for the box */
-  }
-  .Work .box img {
-    height: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 10px; /* Add rounded corners if desired */
-  }
-}
-/* END AWARDS SECTION */
 
 /*----------------------------------------------------
 #Gallery Page

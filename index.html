@@ -190,9 +190,11 @@
       <section id="gallery" class="container-fluid">
         
         <div class="video-bg">
-          <video autoplay loop muted playsinline class="video-bg__content">
-            <source src="./video/01.mp4" type="video/mp4">
-          </video>
+          <div class="video-bg">
+            <video autoplay loop muted playsinline class="video-bg__content">
+                <source src="./video/01.mp4" type="video/mp4">
+            </video>
+        </div>
         </div>
 
         <div class="container">
@@ -201,68 +203,81 @@
             <div class="col-12 text-center">
               <h1 class="p-3">Gallery</h1>
             </div>
-            <article class="col-md-4 p-3">
-              <div class="article-wrapper">
-                <figure>
-                  <a href="gallery.html#bakery"><img src="./img/gallery/01.jpg" alt="" class="img-fluid"></a>
-                </figure>
-                <div class="article-body">
-                  <h2>Bakery</h2>
-                  <a href="gallery.html#bakery">
-                    <p class="p-3">
-                      Explore a delectable assortment of artisanal bread, pastries, and confections.
-                      Immerse yourself in the world of flavors crafted with passion.
-                    </p>
-                  </a>
-                  
-                  <button>
-                    <a href="gallery.html#pastry" class="read-more">More</a>
-                  </button>
-                </div>
-              </div>
-            </article>
-    
-            <article class="col-md-4 p-3">
-              <div class="article-wrapper">
-                <figure>
-                  <a href="gallery.html#pastry"><img src="./img/gallery/02.jpg" alt="" class="img-fluid"></a>
-                </figure>
-                <div class="article-body">
-                  <h2>Pastry</h2>
-                  <a href="gallery.html#pastry">
-                    <p class="p-3">
-                      Indulge in a symphony of flavors with my meticulously crafted pastries.<br>
-                      Each bite tells a story of creativity and expertise, bringing joy to your senses.
-                    </p>
-                  </a>
 
-                  <button>
-                    <a href="gallery.html#pastry" class="read-more">More</a>
-                  </button>
-                  
+            <div class="row pb">
+
+              <div class="col-md-4 p-3">
+                <div class="main">
+                    <div class="cards_item">
+                      <a href="gallery.html#bakery" class="card-link"> <!-- Wrap the card in an anchor tag -->
+                        <div class="card">
+                          <div class="card_image"><img src="./img/gallery/01.jpg" alt="mixed vegetable salad in a mason jar. "></div>
+                          <div class="card_content">
+                            <h2 class="card_title">Bakery</h2>
+                            <div class="card_text">
+                              <p>Explore a delectable assortment of artisanal bread, pastries, and confections.
+                                Immerse yourself in the world of flavors crafted with passion.
+                              </p>
+                            </div>
+
+                            <div>
+                              <h6 class="pt-5">More</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </a> <!-- Close the anchor tag -->
+                    </div>
                 </div>
               </div>
-            </article>
-    
-            <article class="col-md-4 p-3">
-              <div class="article-wrapper">
-                <figure>
-                  <a href="gallery.html#cake"><img src="./img/gallery/03.jpg" alt="" class="img-fluid"></a>
-                </figure>
-                <div class="article-body">
-                  <h2>Cake</h2>
-                  <a href="gallery.html#cake">
-                    <p class="p-3">
-                      Elevate your celebrations with my bespoke cake creations. From elegant wedding cakes to whimsical birthday delights, every cake is a masterpiece.
-                    </p>
-                  </a>
-                  
-                  <button>
-                    <a href="gallery.html#pastry" class="read-more">More</a>
-                  </button>
+              
+  
+              <div class="col-md-4 p-3">
+                <div class="main">
+                    <div class="cards_item">
+                      <a href="gallery.html#pastry" class="card-link"> <!-- Wrap the card in an anchor tag -->
+                        <div class="card">
+                          <div class="card_image"><img src="./img/gallery/02.jpg" alt="mixed vegetable salad in a mason jar. "></div>
+                          <div class="card_content">
+                            <h2 class="card_title">Pastry</h2>
+                            <div class="card_text">
+                              <p>Explore a delectable assortment of artisanal bread, pastries, and confections.
+                                Immerse yourself in the world of flavors crafted with passion.
+                              </p>
+                            </div>
+
+                            <div>
+                              <h6 class="pt-5">More</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </a> <!-- Close the anchor tag -->
+                    </div>
                 </div>
               </div>
-            </article>
+
+              <div class="col-md-4 p-3">
+                <div class="main">
+                    <div class="cards_item">
+                      <a href="gallery.html#cake" class="card-link"> <!-- Wrap the card in an anchor tag -->
+                        <div class="card">
+                          <div class="card_image"><img src="./img/gallery/03.jpg" alt="mixed vegetable salad in a mason jar. "></div>
+                          <div class="card_content">
+                            <h2 class="card_title">Cake</h2>
+                            <div class="card_text">
+                              <p>Elevate your celebrations with my bespoke cake creations. From elegant wedding cakes to whimsical birthday delights, every cake is a masterpiece.
+                              </p>
+                            </div>
+
+                            <div>
+                              <h6 class="pt-5">More</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </a> <!-- Close the anchor tag -->
+                    </div>
+                </div>
+              </div>
+
           </div>
 
           <div class="row justify-content-center pt-5">
@@ -287,106 +302,111 @@
       <section id="Work" class="Work">
         <div class="container">
 
-          <div class="section-title p-5">
+          <div class="section-title">
             <h2>Work Experience</h2>
           </div>
 
           <div class="wrapper">
-            <div class="work-card">
-              <h2><span>#1</span>Panda Retail Company</h2>
-              <p>
+
+            <div class="row justify-content-center">
+              <div class="work-card">
+                <h2><span>#1</span>Panda Retail Company</h2>
                 <h4>Baker</h4>
-                Jun 2008 - Sep 2010<br>
-                Saudi Arabia.<br>
-                <b>Skills:</b><br>
-                Cakes | Customer Service | Food Safety | Teamwork.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#2</span>Concorde El Salam Hotel</h2>
-              <h4>Demi Chef De Partie</h4>
-              <p>2012 - 2014<br>
-                Cairo, Egypt.<br>
-                <b>Skills:</b> | Bread | Bakery | Food Safety | Teamwork.s
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#3</span>Le Méridien Hotels & ResortsLe</h2>
-              <h4>Chef De Partie</h4>
-              <p>Jun 2014 - Aug 2015.<br>
-                Cairo, Egypt.<br>
-                <b>Skills:</b><br>
-                Bread | Bakery | Food Safety | Teamwork.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#4</span>Oscar Grand Stores</h2>
-              <h4>Assistant Bakery Manager</h4>
-              <p>Sep 2014 - Jun 2017<br>
-                Cairo, Egypt.<br>
-                <b>Skills:</b><br>
-                Bread | Leadership | Management | Bakery | Food Safety | Teamwork.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#5</span>NCC Holding</h2>
-              <h4>Bakery Chef</h4>
-              <p>Jul 2017 - Sep 2018<br>
-                Abu Dhabi, United Arab Emirates.<br>
-                <b>Skills:</b><br>
-                Bread | Leadership | Management | Bakery | Food Safety.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#6</span>Heliopolis Radisson BLU</h2>
-              <h4>Junior Sous Chef Bakery</h4>
-              <p>Dec 2018 - Oct 2019<br>
-                Cairo, Egypt<br>
-                <b>Skills:</b><br>
-                Leadership | Management | Bakery | Food Safety.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#7</span>Glowbal Restaurant Group</h2>
-              <h4>Chef De Partie</h4>
-              <p>Oct 2019 - Oct 2020<br>
-                Vancouver, Canada<br>
-                <b>Skills:</b><br>
-                Cakes | Food Safety | Teamwork.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#8</span>Bisou Bake House</h2>
-              <h4>Pastry Chef</h4>
-              <p>Vancouver, Canada<br>
-                Jan 2022 - Oct 2023<br>
-                <b>Skills:</b><br>
-                Cakes | Leadership | Management | Bakery | Food Safety | Teamwork.
-              </p>
-            </div>
-
-            <div class="work-card">
-              <h2><span>#9</span>Gusto A Test Of Italy</h2>
-              <h4>Pastry Chef</h4>
-              <p>
-                  Jan 2022 - Oct 2023<br>
+                <p>
+                  Jun 2008 - Sep 2010<br>
+                  Saudi Arabia.<br>
+                  <b>Skills:</b><br>
+                  Cakes | Customer Service | Food Safety | Teamwork.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#2</span>Concorde El Salam Hotel</h2>
+                <h4>Demi Chef De Partie</h4>
+                <p>2012 - 2014<br>
+                  Cairo, Egypt.<br>
+                  <b>Skills:</b> | Bread | Bakery | Food Safety | Teamwork.s
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#3</span>Le Méridien Hotels & ResortsLe</h2>
+                <h4>Chef De Partie</h4>
+                <p>Jun 2014 - Aug 2015.<br>
+                  Cairo, Egypt.<br>
+                  <b>Skills:</b><br>
+                  Bread | Bakery | Food Safety | Teamwork.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#4</span>Oscar Grand Stores</h2>
+                <h4>Assistant Bakery Manager</h4>
+                <p>Sep 2014 - Jun 2017<br>
+                  Cairo, Egypt.<br>
+                  <b>Skills:</b><br>
+                  Bread | Leadership | Management | Bakery | Food Safety | Teamwork.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#5</span>NCC Holding</h2>
+                <h4>Bakery Chef</h4>
+                <p>Jul 2017 - Sep 2018<br>
+                  Abu Dhabi, United Arab Emirates.<br>
+                  <b>Skills:</b><br>
+                  Bread | Leadership | Management | Bakery | Food Safety.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#6</span>Heliopolis Radisson BLU</h2>
+                <h4>Junior Sous Chef Bakery</h4>
+                <p>Dec 2018 - Oct 2019<br>
+                  Cairo, Egypt<br>
+                  <b>Skills:</b><br>
+                  Leadership | Management | Bakery | Food Safety.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#7</span>Glowbal Restaurant Group</h2>
+                <h4>Chef De Partie</h4>
+                <p>Oct 2019 - Oct 2020<br>
                   Vancouver, Canada<br>
                   <b>Skills:</b><br>
-                  Pastry | Cakes | Bread | Customer Service | Management | Food Safety.</p>
-              </p>
+                  Cakes | Food Safety | Teamwork.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#8</span>Bisou Bake House</h2>
+                <h4>Pastry Chef</h4>
+                <p>Vancouver, Canada<br>
+                  Jan 2022 - Oct 2023<br>
+                  <b>Skills:</b><br>
+                  Cakes | Leadership | Management | Bakery | Food Safety | Teamwork.
+                </p>
+              </div>
+  
+              <div class="work-card">
+                <h2><span>#9</span>Gusto A Test Of Italy</h2>
+                <h4>Pastry Chef</h4>
+                <p>
+                    Jan 2022 - Oct 2023<br>
+                    Vancouver, Canada<br>
+                    <b>Skills:</b><br>
+                    Pastry | Cakes | Bread | Customer Service | Management | Food Safety.</p>
+                </p>
+              </div>
             </div>
 
           </div>
 
         </div>
-      </section><!-- End Work Experience Section -->
+      </section>
+
+                        <!-- /Work Experience Section -->
 
                         <!--CONTACT SECTION-->
 
@@ -394,7 +414,7 @@
         <div>
             <div class="video-bg">
                 <video autoplay loop muted playsinline class="video-bg__content">
-                    <source src="./video/01.mp4" type="video/mp4">
+                    <source src="./video/02.mp4" type="video/mp4">
                 </video>
             </div>
             

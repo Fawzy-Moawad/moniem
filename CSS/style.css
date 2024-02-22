@@ -37,17 +37,17 @@ a:hover {
   display: inline-block;
   background: #2a2a2a;
   color: #fff;
-  line-height: 46px; /* Center vertically */
+  line-height: 40px; /* Center vertically */
   padding: 0; /* Remove padding */
   border-radius: 50%;
   text-align: center;
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   transition: 0.3s;
 }
 
 .social-other ul li a i {
-  line-height: 46px; /* Center vertically */
+  line-height: 40px; /* Center vertically */
 }
 
 .social-other ul li a:hover {
@@ -554,7 +554,7 @@ section {
 }
 
 .about-section .about-section-item img {
-  height: 500px;
+  height: 600px;
   width: auto;
   justify-content: cover;
   align-content: center;
@@ -567,7 +567,7 @@ section {
 }
 
 .about-section .about-section-item p {
-  height: 500px;
+  height: 600px;
   width: 100%;
   font-size: 18px;
   color: #fff;

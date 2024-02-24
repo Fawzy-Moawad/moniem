@@ -3,8 +3,8 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Poppins", sans-serif;
-  color: #444444;
-  background-color: #000000;
+  background-color: #0a0908;
+  
 }
 
 a {
@@ -63,8 +63,14 @@ h4,
 h5,
 h6 {
   font-family: "Satisfy", sans-serif;
+  color: #8faf9e;
 }
 
+h3 {
+  font-weight: 600;
+  font-size: 50px;
+  color: #9580a1;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -152,7 +158,7 @@ h6 {
 }
 
 #header .logo h1 {
-  font-size: 28px;
+  font-size: 35px;
   margin: 0;
   line-height: 1;
   font-weight: 400;
@@ -341,165 +347,21 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background-color: rgba(39, 37, 34, 0.8);
   overflow: hidden;
   padding: 0;
-}
-
-#hero .carousel-item {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#hero .carousel-item::before {
-  content: "";
-  background-color: rgba(12, 11, 10, 0.5);
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-#hero .carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .carousel-content {
-  text-align: center;
-}
-
-#hero h2 {
-  color: #8faf9e;
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
-}
-
-#hero h2 span {
-  color: #9580a1;
-}
-
-#hero p {
-  width: 80%;
-  animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
-  color: #fff;
-}
-
-#hero .carousel-inner .carousel-item {
-  transition-property: opacity;
-  background-position: center top;
-}
-
-#hero .carousel-inner .carousel-item,
-#hero .carousel-inner .active.carousel-item-start,
-#hero .carousel-inner .active.carousel-item-end {
-  opacity: 0;
-}
-
-#hero .carousel-inner .active,
-#hero .carousel-inner .carousel-item-next.carousel-item-start,
-#hero .carousel-inner .carousel-item-prev.carousel-item-end {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-#hero .carousel-inner .carousel-item-next,
-#hero .carousel-inner .carousel-item-prev,
-#hero .carousel-inner .active.carousel-item-start,
-#hero .carousel-inner .active.carousel-item-end {
-  left: 0;
-  transform: translate3d(0, 0, 0);
-}
-
-#hero .carousel-control-next-icon,
-#hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 30px;
-  line-height: 0;
-  width: auto;
-  height: auto;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  transition: 0.3s;
-  color: #8faf9e;
-  width: 54px;
-  height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#hero .carousel-control-next-icon:hover,
-#hero .carousel-control-prev-icon:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: #9580a1;
-}
-
-#hero .carousel-indicators li {
-  cursor: pointer;
-  list-style-type: none;
-}
-
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 1024px) {
-  #hero p {
-    width: 50%;
-  }
-
-  #hero .carousel-control-prev,
-  #hero .carousel-control-next {
-    width: 5%;
-  }
 }
 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-}
-
-.section-bg {
-  background-color: white;
-}
-
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
-}
-
-.section-title h2 {
-  margin: 15px 0 0 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #5f5950;
 }
 
 .section-title h2 span {
   color: #ffb03b;
 }
 
-.section-title p {
-  margin: 15px auto 0 auto;
-  font-weight: 300;
-}
 
 @media (min-width: 1024px) {
   .section-title p {
@@ -507,12 +369,31 @@ section {
   }
 }
 
+/*---------------------------------
+  video section
+---------------------------------*/
+.video {
+  position: relative;
+  height: 250px; /* 100% of the viewport height */
+  width: 100%; /* 100% of the viewport width */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the video element */
+  object-position: center; /* Center the video element */
+}
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 #about {
+  background: rgb(130,95,85);
+  background: linear-gradient(0deg, rgba(130,95,85,1) 0%, rgba(10,9,8,1) 50%);
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 .about-section {
   background: url(../img/00.jpg) center center no-repeat;
@@ -522,7 +403,7 @@ section {
 
 .about-section::before {
   content: "";
-  background-color: rgba(12, 11, 10, 0.8);
+  
   position: absolute;
   top: 0;
   right: 0;
@@ -546,7 +427,7 @@ section {
 
 .about-section .about-section-carousel {
   background: rgba(255, 255, 255, 0.08);
-  padding: 30px;
+  
 }
 
 .about-section .about-section-item {
@@ -554,20 +435,23 @@ section {
 }
 
 .about-section .about-section-item img {
-  height: 600px;
-  width: auto;
-  justify-content: cover;
-  align-content: center;
+  height: 410px;
+  width: 300px;
+  display: block; /* Makes the image a block element */
+  margin: auto; /* Automatically centers the image horizontally */
+  position: relative; /* Allows for absolute positioning */
+  top: 50%; /* Moves the image down by 50% of its height */
+  transform: translateY(-50%); /* Corrects the position of the image */
 }
 
 .about-section .about-section-item h3 {
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
   color: #9580a1;
 }
 
 .about-section .about-section-item p {
-  height: 600px;
+  height: 60%;
   width: 100%;
   font-size: 18px;
   color: #fff;
@@ -596,145 +480,190 @@ section {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+
+/* Defining the theme for the card: colors, fonts, spacing. 
+This uses CSS variables - so you only have to change the colors in one place */ 
+:root {
+
+  /* Message area colors */ 
+  --message-bg: #F1EDE9;
+  --message-line: #94ACD4;
+  --message-txt: #333333;
+
+  /* Fonts */ 
+  --font-banner: 'Abril Fatface', cursive;
+  --font-text: 'Shadows Into Light', cursive;
+
+
+}
+
 #gallery {
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  background: rgb(130,95,85);
+  background: linear-gradient(180deg, rgba(130,95,85,1) 0%, rgba(10,9,8,1) 50%);
+  padding: 0;
+  margin: 0;
+}
+
+
+.bday-card {
+  max-width: 420px;
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#gallery .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Set the video width to 100% of the parent container */
-  height: 100%; /* Set the video height to 100% of the parent container */
-  object-fit: cover;
-  z-index: -1; /* Behind other elements */
-  filter: blur(10px); /* Apply a blur effect with a 5px radius */
-}
-
-#gallery .container-fluid {
-  position: relative;
-  z-index: 1; /* Ensure that cards are on top of the video */
-  padding: 0; /* Remove default padding */
-}
-
-#gallery.cards {
-  display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#gallery.cards_item {
+  padding-top: var(--space-lg);
   display: flex;
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
-#gallery.card_image {
-  height: calc(13*1.2rem);
-  padding: 1.2rem 1.2rem 0;
-  position:relative;
+.bday-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 240px;
+  padding: var(--space-sm) var(--space-sm) var(--space-xlg);
+  background: white;
+  border-radius: 4px;
+  box-shadow: var(--space-xsm) var(--space-xsm) 15px rgba(0,0,0, .15);
+
+  /* Edit the Translate property below to adjust the position of your picture */ 
+  transform: rotate(5deg) translate(20px, 45px);
 }
 
-#gallery.card_image:before,
-#gallery.card_image:after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  left: 60%;
-  top: 0;
-  height: 45px;
-  background: #e6e6e6b8;
-  transform: rotate(45deg);
-  display: none; /* Add this line to hide the before pseudo-element */
+.bday-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#gallery.card_image:after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  left: 40%;
-  bottom: -22px;
-  height: 45px;
-  background: #e6e6e6b8;
-  transform: rotate(-45deg);
-  display: none; /* Add this line to hide the after pseudo-element */
+.bday-decor--container {
+  position: relative;
 }
 
-
-#gallery .card_image img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-#gallery .cards_item {
-  filter:drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
-}
-
-
-#gallery .card {
-  background-color: white;
-  border-radius: 0.25rem;
+.bday-banner {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  padding-left: 30px;
-  background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px),#66afe1 0 1.2rem) right bottom /100% 100%,linear-gradient(red 0 0) 30px 0/2px 100% #fff;
-  background-repeat: no-repeat;
-  line-height: 1.2rem;
-  -webkit-mask:radial-gradient(circle .8rem at 2px 50%,#0000 98%,#000)0 0/100% 2.4rem;
+  align-items: baseline;
+  font-size: 42px;
+  z-index: 1;
+
+  /* Play around with those properties to change your banner styling */ 
+  color: var(--banner-txt);
+  font-family: var(--font-banner);
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+  gap: var(--space-sm) 0;
 }
 
-#gallery .card_content {
-  padding: 1.2rem;
-}
-
-#gallery .card .card_content h6 {
+.bday-banner span {
+  padding: var(--space) var(--space-lg);
+  flex-grow: 0;
   color: red;
+  font-family: "Satisfy", sans-serif;
+  cursor: pointer;
 }
 
-#gallery .card .card_content h6:hover {
+.bday-banner span:hover {
   color: blue;
 }
 
-#gallery .card .card_content p {
-  color: black;
+.bday-banner span:nth-child(2) {
+  margin-left: var(--space-lg);
 }
 
-#gallery h2 .card_title,p {
-  margin: 1.2rem 0;
-}
-#gallery h2 .card_title {
-    font-size: 1.3em;
+
+/* Animations */ 
+
+/* Here we designate an specific animation to an specific element using a class. We have a defined name, time and iteration-count for each animation. We can also define the origin point from which the animation will happen - the default is the center. */  
+.zoom-left-in-out {
+  animation-name: zoom-left-in-out;
+  animation-duration: 1.75s;
+  animation-iteration-count: infinite;
+  transform-origin: left bottom;
 }
 
-/* Adjust video size for smaller screens */
-@media (max-width: 768px) {
-
-  #gallery h1 {
-    font-size: 20px; /* Reduce font size for heading on smaller screens */
-    margin-top: 0; /* Remove margin at the top */
+/* Here we specify what will change on the element when they animate */ 
+@keyframes zoom-left-in-out {
+  /* Animation will start and end with the same settings */ 
+  0%, 100% {
+    transform: scale(0.95) rotate(2deg);
   }
 
-  #gallery h2 {
-    font-size: 18px; /* Reduce font size for article titles on smaller screens */
-  }
-
-  #gallery p {
-    font-size: 14px; /* Reduce font size for article descriptions on smaller screens */
+  /* Animation will reach those settings 50% into the duration time we set on the declaration */
+  50% {
+    transform: scale(1) rotate(-2deg);
   }
 }
+
+/* pulse */ 
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+/* pulse - End */
+
+/* float */ 
+.float {
+  animation-name: float;
+  animation-duration: 1.9s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* float - End */
+
+/* spin */ 
+.spin {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* spin - End */
+
+
+
+
 
 /*--------------------------------------------------------------
 # Work Experience
 --------------------------------------------------------------*/
-
+.work-container{
+  background: rgb(130,95,85);
+background: linear-gradient(0deg, rgba(130,95,85,1) 0%, rgba(10,9,8,1) 50%);
+  padding: 0;
+  margin: 0;
+}
 .work-card {
   width: 350px;
   top: 30px;
@@ -782,27 +711,12 @@ b {
 #Contact
 ----------------------------------------------*/
 #contact {
+  background: rgb(130,95,85);
+  background: linear-gradient(180deg, rgba(130,95,85,1) 0%, rgba(10,9,8,1) 50%);
   position: relative;
   overflow: hidden;
   margin: 0;
   padding: 0;
-}
-
-#contact .container-fluid {
-  position: relative;
-  z-index: 1; /* Ensure that cards are on top of the video */
-  padding: 0; /* Remove default padding */
-}
-
-#contact .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Set the video width to 100% of the parent container */
-  height: 100%; /* Set the video height to 100% of the parent container */
-  object-fit: cover;
-  z-index: -1; /* Behind other elements */
-  filter: blur(10px); /* Apply a blur effect with a 5px radius */
 }
 
 #contact h1{
@@ -858,89 +772,88 @@ b {
 /*----------------------------------------------------
 #Gallery Page
 ----------------------------------------------------*/
-*, p, h2, form, ul, li {
-  margin: 0;
+#gallery-page {
+  background: rgb(130,95,85);
+  background: linear-gradient(0deg, rgba(130,95,85,1) 0%, rgba(10,9,8,1) 50%);
+}
+#gallery-page ul {
+  display: flex;
+  width: calc(80% -);
   padding: 0;
-  box-sizing: border-box;
+  margin: 0;
+  list-style-type: none;
 }
 
-#pastry h1, #cake h1, #bakery h1 {
-  font-family: Satisfy, sans-serif;
-  color: #79ba44;
+#gallery-page li {
+  padding: 0;
+  width: 100%; /* This will make each list item take up the full width of its container */
 }
 
-img {
+#gallery-page img {
+  height: 250px;
   max-width: 100%;
-  height: auto;
-  transition: transform 0.2s ease-in-out;
+  width: 100%;
   object-fit: cover;
+  transition: all 0.2s ease;
+  flex-grow: 1; /* This will make the images fill the available space */
 }
 
-.tag {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0afdd8;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 0 0 15px 0;
-  z-index: 9999;
+
+#gallery-page ul:is(:hover, :focus-within) img {
+  opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+  filter: grayscale(calc(1 - var(--active-lerp, 0)));
 }
 
-.tag a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.5787037;
+  --lerp-2: 0.2962963;
+  --lerp-3: 0.125;
+  --lerp-4: 0.037037;
+  --lerp-5: 0.0046296;
+  --lerp-6: 0;
 }
 
-.tag img {
-  width: 30px;
-  height: 30px;
+#gallery-page a {
+  outline-offset: 4px;
 }
 
-.main {
-  width: 100%;
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-around;
+#gallery-page li {
+  flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+  transition: flex 0.2s ease;
 }
 
-.box {
-  flex: 0 1 calc(33.33% - 20px);
-  margin-bottom: 15px;
-  height: 300px; /* Adjust the height as per your preference */
-  overflow: hidden;
+#gallery-page li:is(:hover, :focus-within) {
+  --active-lerp: var(--lerp-0);
+  z-index: 7;
 }
-
-.box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#gallery-page li:has( + li:is(:hover, :focus-within)),
+#gallery-page li:is(:hover, :focus-within) + li {
+  --active-lerp: var(--lerp-1);
+  z-index: 6;
 }
-
-.box:hover img {
-  transform: scale(1.03);
+#gallery-page li:has( + li + li:is(:hover, :focus-within)),
+#gallery-page li:is(:hover, :focus-within) + li + li {
+  --active-lerp: var(--lerp-2);
+  z-index: 5;
 }
-
-@media (min-width: 768px) {
-  .box {
-    flex: 0 1 calc(50% - 20px);
-  }
+#gallery-page li:has( + li + li + li:is(:hover, :focus-within)),
+#gallery-page li:is(:hover, :focus-within) + li + li + li {
+  --active-lerp: var(--lerp-3);
+  z-index: 4;
 }
-
-@media (min-width: 1024px) {
-  .box {
-    flex: 0 1 calc(25% - 20px);
-  }
+#gallery-page li:has( + li + li + li + li:is(:hover, :focus-within)),
+#gallery-page li:is(:hover, :focus-within) + li + li + li + li {
+  --active-lerp: var(--lerp-4);
+  z-index: 3;
 }
-
-@media (min-width: 1440px) {
-  .box {
-    flex: 0 1 calc(16.666% - 20px);
-  }
+#gallery-page li:has( + li + li + li + li + li:is(:hover, :focus-within)),
+#gallery-page li:is(:hover, :focus-within) + li + li + li + li + li {
+  --active-lerp: var(--lerp-5);
+  z-index: 2;
+}
+#gallery-page li:has( + li + li + li + li + li + li:is(:hover, :focus-within)),
+#gallery-page li:is(:hover, :focus-within) + li + li + li + li + li + li {
+  --active-lerp: var(--lerp-6);
+  z-index: 1;
 }
